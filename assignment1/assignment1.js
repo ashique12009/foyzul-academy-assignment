@@ -1,13 +1,13 @@
 console.log('script has been loaded');
 // QUESTIONS:
 // How can we calculate 
-// 1. individual grade 175/2  
+// 1. individual grade 175/2
 // 2. overall class grade 345/4
 
 // Solution code:
 const studentsReports = `[
 	{
-		"name": "John",
+		"name": "John Doe",
 		"age": 21,
 		"courses": [
 			{
@@ -21,7 +21,7 @@ const studentsReports = `[
 		]
 	},
 	{
-		"name": "Alice",
+		"name": "Jack Doe",
 		"age": 20,
 		"courses": [
 			{
