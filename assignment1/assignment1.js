@@ -50,7 +50,7 @@ const individualStudentAverage = studentObjects.map((student) => {
 });
 
 // Overall Class Grade
-const overallGradeOfClass = totalGradesOfStudents / studentObjects.map(item => item.courses).flat().length;
+const overallGradeOfClass = totalGradesOfStudents / studentObjects.map(course => course.courses).flat().length;
 
 console.log(totalGradesOfStudents, "Total Grades Of Students");
 
