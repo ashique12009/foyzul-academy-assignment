@@ -38,13 +38,11 @@ const studentsReports = `[
 
 const studentObjects = JSON.parse(studentsReports);
 
-console.log(studentObjects, "STUDENT OBJECT");
-
-const AllStudentsGrade = studentObjects.map((student) => {
+const gradeOfAllStudents = studentObjects.map((student) => {
 	return student.courses.reduce((sum, course) => sum = sum + course.grade, 0);
 });
 
-const totalGradesOfStudents = AllStudentsGrade.reduce((sum, current) => sum = sum + current, 0);
+const totalGradesOfStudents = gradeOfAllStudents.reduce((sum, current) => sum = sum + current, 0);
 
 // Individual Student Average
 const individualStudentAverage = studentObjects.map((student) => {
@@ -52,10 +50,10 @@ const individualStudentAverage = studentObjects.map((student) => {
 });
 
 // Overall Class Grade
-const overAllClassGrade = totalGradesOfStudents / studentObjects.map(item => item.courses).flat().length;
+const overallGradeOfClass = totalGradesOfStudents / studentObjects.map(item => item.courses).flat().length;
 
-console.log(totalGradesOfStudents, "totalGradesOfStudents");
+console.log(totalGradesOfStudents, "Total Grades Of Students");
 
-console.log(individualStudentAverage, "individualStudentAverage");
+console.log(individualStudentAverage, "Individual Student Average");
 
-console.log(overAllClassGrade, "overAllClassGrade");
+console.log(overallGradeOfClass, "Overall Grade Of Class");
