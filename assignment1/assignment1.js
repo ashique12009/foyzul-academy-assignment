@@ -39,14 +39,14 @@ const studentsReports = `[
 const studentObjects = JSON.parse(studentsReports);
 
 const gradeOfAllStudents = studentObjects.map((student) => {
-	return student.courses.reduce((sum, course) => sum = sum + course.grade, 0);
+	return student.courses.reduce((sum, course) => sum += course.grade, 0);
 });
 
-const totalGradesOfStudents = gradeOfAllStudents.reduce((sum, current) => sum = sum + current, 0);
+const totalGradesOfStudents = gradeOfAllStudents.reduce((sum, current) => sum += current, 0);
 
 // Individual Student Average
 const individualStudentAverage = studentObjects.map((student) => {
-	return student.courses.reduce((sum, course) => sum = sum + course.grade, 0) / student.courses.length;
+	return student.courses.reduce((sum, course) => sum += course.grade, 0) / student.courses.length;
 });
 
 // Overall Class Grade
