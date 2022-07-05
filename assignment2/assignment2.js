@@ -116,14 +116,17 @@ orders.map((order) => {
 });
 
 let itemnWiseTotalArray = cartItemObjectCollector.reduce(function(accumulator, cur) {
-    let x = cur.product,
-        found = accumulator.find(function (elem) {
-            return elem.product == x;
-        });
+    let x = cur.product;
+    
+    let found = accumulator.find(function (elem) {
+        return elem.product == x;
+    });
+
     if (found) 
         found.totalPrice += cur.totalPrice;
     else 
         accumulator.push(cur);
+        
     return accumulator;
 }, []);
 
