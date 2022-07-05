@@ -131,7 +131,7 @@ itemnWiseTotalArray.map((item) => {
     itemnWiseTotal += item.product + ': ' + item.totalPrice + ' ';
 });
 
-console.log('Item wise total', itemnWiseTotal);
+console.log('Item wise total', itemnWiseTotal); // Rice: 50, Shirt: 2500, Bread: 15, Coffee: 12
 
 // Question:
 // 1. Calculate total orders amount: 2577
